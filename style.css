@@ -1,67 +1,80 @@
 :root {
-    --body-bg-color: #E9DFFF;
-    --body-text-color: #2c2c2c;
-    --heading-color: #53319c;
-    --nav-text: #BEA7FA;
-    --nav-menu-disabled: #e7e7e7;
+  --body-bg-color: #e9dfff;
+  --body-text-color: #2c2c2c;
+  --heading-color: #53319c;
+  --nav-text: #bea7fa;
+  --nav-menu-disabled: #e7e7e7;
 }
 
 body {
-    background-color: var(--body-bg-color);
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px;
-    color: var(--body-text-color);
+  background-color: var(--body-bg-color);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  color: var(--body-text-color);
 }
 
 h1 {
-    color: var(--heading-color); 
-    text-transform: capitalize;
+  color: var(--heading-color);
+  text-transform: capitalize;
 }
 
 .container {
-    background-color: white;
-    max-width: 900px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    padding: 0 64px 64px 64px;
-    position: relative;
+  background-color: white;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 64px 64px 64px;
+  position: relative;
 }
 
 .tabs {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: var(--nav-text);
-    margin: 0 0 32px 0;
-    padding: 16px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--nav-text);
+  margin: 0 0 32px 0;
+  padding: 16px;
 }
 
 .tabs p {
-    padding: 8px;
+  padding: 8px;
+  position: relative;
 }
 
 .tabs p:hover {
-    color: var(--heading-color);
-    cursor: pointer;
+  color: var(--heading-color);
+  cursor: pointer;
 }
 
 .tabs p.active {
-    color: var(--heading-color);
+  color: var(--heading-color);
 }
 
 .line {
-    height: 3px;
-    width: 100%;
-    background-color: var(--nav-menu-disabled);
-    position: absolute;
-    top: 98px
+  height: 3px;
+  width: 100%;
+  background-color: var(--nav-menu-disabled);
+  position: absolute;
+  top: 98px;
+}
+
+.tabs .active::before {
+  content: "";
+  width: 200%;
+  height: 4px;
+  background-color: var(--heading-color);
+  position: absolute;
+  left: -50%;
+  top: 65px;
+  z-index: 2;
+  border-radius: 10px;
 }
