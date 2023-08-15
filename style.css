@@ -4,6 +4,7 @@
   --heading-color: #53319c;
   --nav-text: #bea7fa;
   --nav-menu-disabled: #e7e7e7;
+  --card-background: #faf7ff;
 }
 
 body {
@@ -113,4 +114,31 @@ h1 {
   color: var(--heading-color);
   padding: 4px 16px;
   border-radius: 16px;
+}
+
+.session-card {
+  background-color: var(--card-background);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 30px;
+  width: 50%;
+  margin: 16px 0;
+  border-radius: 10px;
+}
+
+.session-card p {
+  color: var(--body-text-color);
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.session-card .number {
+  color: var(--heading-color);
+  font-size: 54px;
+}
+
+.description {
+  line-height: 32px;
+  margin: 16px 0 32px 0;
 }
