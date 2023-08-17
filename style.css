@@ -29,6 +29,7 @@ h1 {
   max-width: 900px;
   width: 100%;
   display: flex;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -148,6 +149,7 @@ h1 {
 .slider {
   width: 100%;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .slider .bar {
@@ -218,7 +220,28 @@ h1 {
   text-align: center;
   font-weight: bold;
   color: var(--heading-color);
-  text-transform: uppercase;
+  transition: 0.15s transform ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card .save-header {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 35, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  );
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .card .price {
@@ -228,6 +251,7 @@ h1 {
 
 .card .top-section p {
   margin: 4px 0;
+  text-transform: uppercase;
 }
 
 .card .top-section {
@@ -238,4 +262,19 @@ h1 {
   width: 40%;
   border: 1px solid var(--slider-border);
   border-radius: 2px;
+}
+
+.card button {
+  background-color: var(--heading-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  transition: 0.15s transform ease;
+}
+
+.card button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
 }
