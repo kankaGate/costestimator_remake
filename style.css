@@ -202,3 +202,40 @@ h1 {
   justify-content: space-between;
   color: #a6a6a6;
 }
+
+.card-wrapper {
+  display: flex;
+  /* justify-content: space-around; */
+  
+}
+
+.card {
+  background-color: var(--card-background);
+  border-radius: 10px;
+  margin: 16px;
+  padding: 16px 32px;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+  color: var(--heading-color);
+  text-transform: uppercase;
+}
+
+.card .price {
+  font-size: 42px;
+  color: var(--body-text-color);
+}
+
+.card .top-section p {
+  margin: 4px 0;
+}
+
+.card .top-section {
+  padding: 8px;
+}
+
+.card hr {
+  width: 40%;
+  border: 1px solid var(--slider-border);
+  border-radius: 2px;
+}
