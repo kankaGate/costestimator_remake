@@ -5,6 +5,8 @@
   --nav-text: #bea7fa;
   --nav-menu-disabled: #e7e7e7;
   --card-background: #faf7ff;
+  --slider-background: #f8f8f8;
+  --slider-border: #d2d2d2;
 }
 
 body {
@@ -141,4 +143,62 @@ h1 {
 .description {
   line-height: 32px;
   margin: 16px 0 32px 0;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+}
+
+.slider .bar {
+  width: 100%;
+  background-color: var(--slider-background);
+  height: 16px;
+  border: 1px solid var(--slider-border);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.slider .progress {
+  width: 35%;
+  height: 18px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 35, 1) 0%,
+    rgba(53, 10, 74, 1) 36%,
+    rgba(83, 49, 156, 1) 100%
+  );
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider .point {
+  height: 24px;
+  width: 24px;
+  background-color: var(--heading-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 33%;
+  border: 2px solid white;
+  transition: 0.115s transform ease;
+}
+
+.slider .point:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.scale {
+  width: 100%;
+}
+
+.slider .scale ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  color: #a6a6a6;
 }
